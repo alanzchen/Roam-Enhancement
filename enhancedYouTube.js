@@ -75,11 +75,10 @@ const addTimestampControls = (block, player) => {
 const getControlButton = (block) => block.parentElement.querySelector('.timestamp-control');
 
 const addControlButton = (block, timestamp, fn) => {
-  const button = document.createElement('button');
-  button.innerText = '►';
+  const button = document.createElement('a');
+  button.innerText = '▶️';
   button.classList.add('timestamp-control');
   button.dataset.timestamp = timestamp;
-  button.style.borderRadius = '50%';
   button.addEventListener('click', fn);
   block.parentElement.insertBefore(button, block);
 };
